@@ -1,0 +1,33 @@
+// h2__title
+.h2__title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2em;
+    margin-bottom: var(--px50);
+    width: max-content;
+    overflow: hidden;
+
+    @include sm {
+        font-size: 2.5em;
+    }
+    @include md {
+        font-size: 3.5em;
+    }
+}
+
+// h3__title
+.h3__title {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-weight: 900;
+    width: max-content;
+
+    @include sm {
+        font-size: 1.5em;
+    }
+    @include lg {
+        font-size: 1.8em;
+    }
+}

@@ -1,0 +1,22 @@
+.layer {
+    .layer__list {
+        row-gap: var(--px50);
+        .layer__item {
+            img {
+                margin-bottom: var(--px25);
+            }
+            a.title {
+                ////////// link description //////////
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--black);
+                padding: 20px 15px;
+
+                span {
+                    height: max-content;
+                }
+            }
+        }
+    }
+}

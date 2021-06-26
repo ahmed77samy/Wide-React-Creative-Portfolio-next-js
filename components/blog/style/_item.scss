@@ -1,0 +1,48 @@
+.blog__item {
+    .item__image {
+        ////////// item__image //////////
+        position: relative;
+        overflow: hidden;
+
+        img {
+            @include transition(1s var(--transition-1));
+        }
+
+        .item__social {
+            opacity: 0;
+            a,
+            span {
+                &:hover {
+                    background: var(--red);
+                }
+            }
+        }
+    }
+    .item__content {
+        ////////// item__content //////////
+        padding-top: var(--px25);
+        a {
+            color: inherit;
+            h4 {
+                font-size: 1rem;
+                @include sm {
+                    font-size: 1.3rem;
+                }
+                @include sm {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .item__image {
+            img {
+                transform: scale(1.1) !important;
+            }
+            .item__social {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.work__item {
+    transition: opacity 0.3s var(--transition-1);
+    @include lg {
+        background: var(--sub);
+    }
+    .row {
+        row-gap: var(--px50);
+        .item__image {
+            ////////// item__image //////////
+            position: relative;
+            overflow: hidden;
+            img {
+                @include transition(1s var(--transition-1));
+                max-height: 600px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .item__social {
+                opacity: 0;
+                a,
+                span {
+                    &:hover {
+                        background: var(--red);
+                    }
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1) !important;
+                }
+                .item__social {
+                    opacity: 1;
+                }
+            }
+        }
+        .item__content {
+            ////////// item__content //////////
+            p {
+                color: var(--w-one);
+                margin-bottom: var(--px25);
+            }
+
+            .button__2 {
+                &:hover {
+                    background: var(--black);
+                    border-color: var(--border-1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.slidercontactus {
+    padding-top: 100px;
+    .slider__title {
+        .slider__description {
+            ////////// slider__description //////////
+            padding: 5px 0 5px 15px;
+            border-left: 1px solid var(--border-2);
+            margin-left: auto;
+            color: var(--w-one);
+            @include md {
+                width: max-content;
+            }
+        }
+    }
+}

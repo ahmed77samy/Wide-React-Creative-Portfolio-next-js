@@ -1,0 +1,38 @@
+.portfoliointerface {
+    margin-bottom: var(--main--padding);
+    .row {
+        row-gap: var(--px50);
+        .portfolio__image {
+            ////////// portfolio__image //////////
+            position: relative;
+            img {
+                width: 100%;
+                cursor: pointer;
+            }
+            .item__social {
+                ////////// item__social //////////
+                a,
+                span {
+                    &:hover {
+                        background: var(--red);
+                    }
+                }
+            }
+        }
+        .portfolio__content {
+            ////////// portfolio__content //////////
+            p {
+                margin-bottom: var(--px25);
+            }
+            .portfolio__about {
+                row-gap: var(--px25);
+                margin-bottom: var(--px25);
+                section {
+                    width: 100%;
+                    border: 1px solid var(--border-1);
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.portfoliosingle__page {
+    padding-top: 100px;
+    @import "/components/portfolio/style/portfolio_interface";
+    @import "/components/portfolio/style/portfolio_details";
+    @import "/components/portfolio/style/portfolio_parts";
+    @import "/components/portfolio/style/portfolio_controls";
+}

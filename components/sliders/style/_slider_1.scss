@@ -1,0 +1,155 @@
+.slider {
+    position: relative;
+    margin-bottom: var(--main--padding);
+    height: 100vh;
+    .container-fluid {
+        z-index: 2;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        .slider__content {
+            ////////// slider__content //////////
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .sp__social {
+                ////////// sp__social //////////
+                width: max-content;
+                position: absolute;
+                bottom: var(--px25);
+                left: 0;
+                pointer-events: all;
+                span,
+                a {
+                    &:hover {
+                        background: var(--red);
+                    }
+                }
+            }
+            .slider__timeline {
+                ////////// slider__timeline //////////
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 300px;
+                height: 2px;
+                background: var(--border-2);
+                transform-origin: top;
+                transform: translateX(50%) rotate(90deg);
+
+                &::after {
+                    content: attr(data-where);
+                    position: absolute;
+                    right: calc(100% + 7px);
+                    top: -100%;
+                    transform: rotate(-90deg) translateX(7px);
+                }
+                &::before {
+                    content: attr(data-length);
+                    position: absolute;
+                    left: calc(100% + 7px);
+                    top: -100%;
+                    transform: rotate(-90deg) translateX(7px);
+                }
+
+                .timeline__progress {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--white);
+                    transform-origin: left;
+                }
+            }
+            .slider__controls {
+                ////////// slider__controls //////////
+                pointer-events: all;
+                .swiper-button-prev.button__arrow {
+                    position: absolute;
+                    top: auto;
+                    left: auto;
+                    bottom: var(--px25);
+                    right: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .swiper-button-next.button__arrow {
+                    position: absolute;
+                    top: auto;
+                    left: auto;
+                    bottom: var(--px25);
+                    transform: translateY(calc(-100% - var(--px15)));
+                    right: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            .content__inner {
+                ////////// content__inner //////////
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                overflow: hidden;
+                main {
+                    h1 {
+                        text-transform: uppercase;
+                        color: transparent;
+                        font-size: 8rem;
+                        width: max-content;
+                        -webkit-text-stroke: 1px var(--border-1);
+                        font-family: var(--font--2);
+                        margin-top: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    .slider__item {
+        ////////// slider__item //////////
+        position: relative;
+        overflow: hidden;
+        z-index: 9;
+        img {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        .item__content {
+            ////////// item__content //////////
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            @include rgba($black, 0.5);
+            .container {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                h2 {
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    letter-spacing: 3px;
+                    opacity: 0;
+                    @include transition(opacity 1s var(--transition-1) 1s);
+                    @include sm {
+                        font-size: 4rem;
+                    }
+                    @include lg {
+                        font-size: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}

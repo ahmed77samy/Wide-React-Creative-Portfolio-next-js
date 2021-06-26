@@ -1,0 +1,27 @@
+.experience__item {
+    border: 1px solid transparent;
+    padding: var(--px25);
+    background: var(--sub);
+    transition: background 0.5s, border 0.5s;
+    .item__header {
+        ////////// item__header //////////
+        display: flex;
+        flex-direction: column;
+        span {
+            font-size: 40px;
+            color: var(--white);
+            align-self: flex-end;
+            margin-bottom: var(--px25);
+            @include transition(color 0.5s);
+        }
+        h4 {
+            margin: 0;
+            width: min-content;
+            color: var(--white);
+        }
+    }
+    &:hover {
+        background: transparent;
+        border-color: var(--border-1);
+    }
+}

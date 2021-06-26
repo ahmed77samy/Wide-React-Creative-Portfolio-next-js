@@ -1,0 +1,27 @@
+.portfolio_2 {
+    .portfolio__nav {
+        ////////// portfolio__nav //////////
+        margin-bottom: var(--px50);
+        @import "/components/nav/style/nav";
+        ul {
+            margin: auto;
+        }
+    }
+    .portfolio__list {
+        ////////// portfolio__list //////////
+        row-gap: var(--px50);
+        .item__parent {
+            transition: opacity 0.3s var(--transition-1);
+            @include lg {
+                padding: 50px;
+                &:nth-child(odd) {
+                    background: var(--sub);
+                }
+            }
+            @include xl {
+                padding: 80px 80px;
+            }
+            @import "/components/work/style/item_2";
+        }
+    }
+}

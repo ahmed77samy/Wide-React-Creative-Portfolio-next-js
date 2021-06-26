@@ -1,0 +1,47 @@
+.sliderabout {
+    margin-bottom: var(--main--padding);
+    .col-12 {
+        &:first-of-type {
+            position: absolute;
+            width: 100%;
+            @include lg {
+                position: static;
+            }
+        }
+    }
+
+    .slider__content {
+        ////////// slider__content //////////
+        padding-top: 100px;
+        padding-bottom: 100px;
+        position: relative;
+        z-index: 2;
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            @include sm {
+                font-size: 3.5rem;
+            }
+            @include lg {
+                font-size: 4.5rem;
+                width: max-content;
+            }
+            @include xl {
+                font-size: 5.5rem;
+            }
+        }
+    }
+    .slider__image {
+        ////////// slider__image //////////
+        position: relative;
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .overlay {
+            @include overlay();
+            @include rgba($black, 0.5);
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.work__item {
+    overflow: hidden;
+    position: relative;
+    .item__image {
+        ////////// item__image //////////
+        img {
+            object-fit: cover;
+            height: 100vh;
+            width: 100%;
+            transform: scale(1.1, 1.1);
+            @include transition(1s var(--transition-1));
+        }
+    }
+    .item__content {
+        ////////// item__content //////////
+        @include overlay();
+        @include rgba($black, 0.3);
+        padding: var(--px25);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include transition(1s var(--transition-1));
+
+        .item__group {
+            ////////// item__group //////////
+            overflow: hidden;
+            span.label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            h4 {
+                width: max-content;
+                margin-bottom: var(--px25);
+            }
+
+            p {
+                margin-bottom: var(--px25);
+            }
+
+            .sp__social {
+                ////////// sp__social //////////
+                margin-top: var(--px25);
+                opacity: 0;
+                @include transition(1s var(--transition-1));
+                span,
+                a {
+                    &:hover {
+                        background: var(--red);
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .item__image {
+            img {
+                transform: scale(1, 1);
+            }
+        }
+        .item__content {
+            @include rgba($black, 0.8);
+            .item__group {
+                .sp__social {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

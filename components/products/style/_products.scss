@@ -1,0 +1,27 @@
+.products {
+    .products__content {
+        ////////// products__content //////////
+        .row {
+            row-gap: var(--px50);
+            .products__item {
+                background: var(--sub);
+                padding: var(--px25);
+                .item__header {
+                    ////////// item__header //////////
+                    display: flex;
+                    span {
+                        font-size: 20px;
+                        color: var(--red);
+                    }
+                    h4 {
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                }
+                .joiner {
+                    margin: var(--px25) 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.blogsingle__page {
+    @import "/components/blog/style/blog_interface";
+    @import "/components/blog/style/blog_parts";
+    @import "/components/blog/style/blog_details";
+    @import "/components/blog/style/blog_author";
+    @import "/components/blog/style/blog_comments";
+    @import "/components/blog/style/blog_form";
+    @import "/components/blog/style/blog_controls";
+}

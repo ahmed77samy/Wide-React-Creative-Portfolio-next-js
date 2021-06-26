@@ -1,0 +1,12 @@
+.experience {
+    .row {
+        row-gap: var(--px50);
+        .experience__title {
+            ////////// experience__title //////////
+            p {
+                color: var(--w-one);
+            }
+        }
+        @import "./item";
+    }
+}

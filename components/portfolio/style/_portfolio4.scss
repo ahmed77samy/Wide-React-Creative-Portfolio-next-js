@@ -1,0 +1,19 @@
+.portfolio_4 {
+    .portfolio__nav {
+        ////////// portfolio__nav //////////
+        margin-bottom: var(--px50);
+        @import "/components/nav/style/nav";
+    }
+    .portfolio__list {
+        ////////// portfolio__list //////////
+        row-gap: var(--px50);
+        .item__parent {
+            transition: opacity 0.3s var(--transition-1);
+            @include lg {
+                background: var(--sub);
+                background-clip: content-box;
+            }
+            @import "/components/work/style/item_4";
+        }
+    }
+}

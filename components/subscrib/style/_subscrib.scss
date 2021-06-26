@@ -1,0 +1,17 @@
+.subscrib {
+    .subscrib__form {
+        ////////// subscrib__form //////////
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--px50);
+        @include md {
+            flex-direction: row;
+        }
+        input {
+            flex-grow: 1;
+        }
+        button {
+            align-self: center;
+        }
+    }
+}

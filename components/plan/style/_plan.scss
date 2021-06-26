@@ -1,0 +1,21 @@
+.plan {
+    .row {
+        row-gap: var(--px50);
+        .details__plan {
+            ////////// details__plan //////////
+            .points__plan {
+                .breakpoint__plan {
+                    padding: var(--px15) 0;
+
+                    &:last-of-type {
+                        padding: var(--px15) 0 0;
+                    }
+
+                    span.icon {
+                        color: var(--red);
+                    }
+                }
+            }
+        }
+    }
+}

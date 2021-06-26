@@ -1,0 +1,85 @@
+.testimonials__items {
+    .row {
+        row-gap: var(--px50);
+        .items__image {
+            ////////// items__image //////////
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+
+            @include md {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @include lg {
+                border: 3px solid var(--sub);
+                padding: 80px;
+            }
+
+            .icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 30px;
+                color: var(--red);
+                display: none;
+                @include lg {
+                    display: inherit;
+                }
+            }
+
+            img {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+                @extend %transition5;
+                &.active {
+                    position: relative;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+        .items__content {
+            ////////// items__content //////////
+            @include lg {
+                background: var(--black);
+                padding-top: var(--px50);
+                padding-bottom: var(--px50);
+                width: 110.5%;
+                transform: translateX(-10.5%);
+            }
+
+            p,
+            h5,
+            span.date {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+                &.active {
+                    @extend %transition5;
+                    position: relative;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+
+            h5 {
+                span.job {
+                    color: var(--red);
+                    font-size: var(--px15);
+                    font-family: var(--font--2);
+                }
+            }
+
+            p:not(.active) {
+                transform: translateY(-100%);
+            }
+
+            span.date {
+                color: var(--w-less);
+            }
+        }
+    }
+}

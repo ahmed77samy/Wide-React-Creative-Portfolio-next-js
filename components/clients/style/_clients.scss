@@ -1,0 +1,59 @@
+.cilents {
+    .row {
+        margin: 0 -2px;
+        row-gap: 4px;
+        .col-12 {
+            padding: 0 2px;
+
+            .client__cilents {
+                position: relative;
+                border-radius: var(--raduis-1);
+                margin: var(--px25) 0;
+                height: 200px;
+                overflow: hidden;
+                border: 1px solid transparent;
+                @include transition(border 0.8s var(--transition-1));
+                @include lg {
+                    margin: 0;
+                }
+
+                .Item__First {
+                    ////////// Item__First //////////
+                    width: 100%;
+                    height: 100%;
+                    background: var(--black);
+                    color: var(--white);
+                    font-size: 20px;
+                    text-decoration: underline;
+                    top: -100%;
+                    position: relative;
+                    @include transition(0.8s var(--transition-1));
+                }
+
+                .Item__second {
+                    ////////// Item__second //////////
+                    width: 100%;
+                    height: 100%;
+                    background: var(--sub);
+                    top: -100%;
+                    position: relative;
+                    overflow: hidden;
+                    @include transition(0.8s var(--transition-1));
+                    img {
+                        user-select: none;
+                    }
+                }
+                &:hover {
+                    border-color: var(--border-1);
+                    .Item__First {
+                        top: 0;
+                    }
+
+                    .Item__second {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

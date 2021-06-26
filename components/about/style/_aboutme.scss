@@ -1,0 +1,37 @@
+.aboutme {
+    .row {
+        row-gap: var(--px50);
+        .aboutme__group {
+            ////////// aboutme__group //////////
+            display: flex;
+            flex-direction: column;
+            row-gap: var(--px25);
+            @include lg {
+                row-gap: 0;
+                flex-direction: row;
+            }
+            .group__description {
+                flex-basis: 15%;
+            }
+            .group__content {
+                flex-basis: 85%;
+                display: flex;
+                flex-direction: column;
+                row-gap: var(--px50);
+                span {
+                    height: max-content;
+                }
+            }
+        }
+        .aboutme__statistics {
+            ////////// aboutme__statistics //////////
+            .statistics__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--sub);
+                padding: var(--px25);
+            }
+        }
+    }
+}

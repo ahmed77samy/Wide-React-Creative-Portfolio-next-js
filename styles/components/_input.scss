@@ -1,0 +1,17 @@
+.input__1 {
+    outline: none !important;
+    background: var(--sub);
+    color: var(--w-one);
+    padding: $padding-M $padding-M + 10;
+    border: 1px solid transparent;
+    font-size: $font-M;
+
+    &.input--large {
+        padding: $padding-L $padding-L + 13;
+        font-size: $font-L;
+    }
+    &.input--small {
+        padding: $padding-S $padding-S + 7;
+        font-size: $font-S;
+    }
+}

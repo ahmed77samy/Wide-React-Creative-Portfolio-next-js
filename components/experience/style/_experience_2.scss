@@ -1,0 +1,47 @@
+.experience2 {
+    .row {
+        row-gap: var(--px50);
+
+        .experience__content {
+            ////////// experience__content //////////
+            display: flex;
+            flex-direction: column;
+            row-gap: var(--px25);
+            margin-bottom: var(--px25);
+            h4 {
+                width: max-content;
+            }
+        }
+        .experience__prgoress {
+            ////////// experience__prgoress //////////
+            display: flex;
+            flex-direction: column;
+            row-gap: var(--px25);
+            .group__prgoress {
+                .prgoress__content {
+                    ////////// prgoress__content //////////
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                }
+                progress {
+                    ////////// progress //////////
+                    appearance: none;
+                    width: 100%;
+                    height: 15px;
+                    transform: skew(20deg);
+                }
+                progress::-webkit-progress-bar {
+                    background: transparent;
+                    border-right: 3px solid var(--red);
+                }
+                progress::-webkit-progress-value {
+                    background: var(--sub);
+                }
+            }
+        }
+        .button__2 {
+            margin-top: var(--px25);
+        }
+    }
+}

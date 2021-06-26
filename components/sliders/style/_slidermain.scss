@@ -1,0 +1,51 @@
+.banner {
+    height: 100vh;
+    // background: url(../../../images/backgrounds/1.png) center;
+    background: url("../../../public/image/backgrounds/1.png") center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    .overlay {
+        @include overlay(var(--opacity-1));
+    }
+    .banner__content {
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .banner__title {
+            ////////// banner__title //////////
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                position: relative;
+                text-transform: uppercase;
+                font-weight: 900;
+                margin-bottom: var(--px25);
+                text-align: center;
+            }
+        }
+        .sp__social {
+            ////////// sp__social //////////
+            position: absolute;
+            top: 50%;
+            display: none;
+            left: 15px;
+            transform: translateY(-50%);
+
+            @include md {
+                display: block;
+            }
+
+            a {
+                &:hover,
+                &.active {
+                    background: var(--red);
+                }
+            }
+        }
+    }
+}

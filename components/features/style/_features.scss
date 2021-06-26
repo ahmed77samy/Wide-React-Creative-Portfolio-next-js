@@ -1,0 +1,31 @@
+.features {
+    .row {
+        row-gap: var(--px25);
+        .features__feat {
+            margin-right: var(--px25);
+            @include md {
+                margin-right: var(--px50);
+            }
+
+            .feat__image {
+                ////////// feat__image //////////
+                background: var(--sub);
+                border-radius: var(--raduis-1);
+                @extend %transition5;
+                img {
+                    user-select: none;
+                }
+            }
+            &:hover {
+                .feat__image {
+                    background: var(--red);
+                }
+            }
+            .feat__details {
+                ////////// feat__details //////////
+                color: var(--w-one);
+                margin: var(--px15) 0 0;
+            }
+        }
+    }
+}

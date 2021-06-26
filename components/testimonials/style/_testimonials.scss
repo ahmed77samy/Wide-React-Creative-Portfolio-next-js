@@ -1,0 +1,45 @@
+.testimonials {
+    .container {
+        position: relative;
+        .testimonials__list {
+            ////////// testimonials__list //////////
+            position: relative;
+            &::after {
+                content: attr(data-active);
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                font-size: 9em;
+                color: var(--border-1);
+                z-index: -1;
+                line-height: 1;
+                bottom: 0;
+                @include md {
+                    top: 0;
+                    bottom: unset;
+                    z-index: 1;
+                }
+            }
+            @import "./items";
+        }
+        .testimonials__controls {
+            ////////// testimonials__controls //////////
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: var(--px25);
+            @include md {
+                position: absolute;
+                margin-top: 0;
+            }
+            button {
+                border-color: var(--border-1);
+                &:hover {
+                    border-color: var(--red);
+                }
+            }
+        }
+    }
+}

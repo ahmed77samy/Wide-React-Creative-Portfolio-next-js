@@ -1,0 +1,31 @@
+.contact {
+    .contact__details {
+        ////////// contact__details //////////
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--px25);
+        .contact__group {
+            ////////// contact__groups //////////
+            display: flex;
+            svg {
+                color: var(--red);
+            }
+        }
+    }
+    form {
+        ////////// form //////////
+        .row {
+            row-gap: var(--px25);
+            .contact__group {
+                ////////// contact__groups //////////
+                input {
+                    width: 100%;
+                }
+                textarea {
+                    width: 100%;
+                    resize: none;
+                }
+            }
+        }
+    }
+}

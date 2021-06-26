@@ -1,0 +1,56 @@
+.testimonials2 {
+    .row {
+        row-gap: var(--px50);
+        .details__testimonials {
+            ////////// details__testimonials //////////
+            .group__testimonials {
+                p.label {
+                    width: max-content;
+                    margin: var(--px25) 0;
+                }
+
+                .clients__testimonials {
+                    ////////// clients__testimonials //////////
+                    padding-left: var(--px15);
+                    position: relative;
+                    overflow: hidden;
+                    label {
+                        display: none;
+                        &.active {
+                            display: inherit;
+                        }
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                        pointer-events: none;
+                        &.active {
+                            opacity: 1;
+                            pointer-events: inherit;
+                            position: relative;
+                            margin-bottom: var(--px25);
+                        }
+                    }
+                }
+                .control__testimonials {
+                    ////////// control__testimonials //////////
+                    padding-left: var(--px15);
+                    span {
+                        margin-right: 10px;
+                        &:hover,
+                        &.active {
+                            background: var(--red);
+                            border-color: transparent;
+                            color: var(--white);
+                        }
+                        &.disabeld {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

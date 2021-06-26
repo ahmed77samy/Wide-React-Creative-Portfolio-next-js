@@ -1,0 +1,25 @@
+.blogform {
+    .row {
+        row-gap: var(--px25);
+        .blog__group {
+            ////////// blog__group //////////
+            display: flex;
+            flex-direction: column;
+            &:not(:first-of-type) {
+                margin-top: var(--px25);
+            }
+            input {
+                width: 100%;
+            }
+            button {
+                margin: calc(var(--px25)) auto 0;
+                display: block;
+            }
+            textarea {
+                width: 100%;
+                height: 100%;
+                resize: none;
+            }
+        }
+    }
+}

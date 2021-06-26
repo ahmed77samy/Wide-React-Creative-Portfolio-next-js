@@ -1,0 +1,64 @@
+// @media query
+
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// transition
+
+@mixin transition($time) {
+    transition: $time;
+    @content;
+}
+
+// overlay
+
+@mixin overlay($background: unset) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    // z-index: 99;
+    @content;
+}
+
+// rgba
+@mixin rgba($color, $alpha) {
+    background: rgba($color, $alpha);
+    @content;
+}
+
+// rotated-text
+@mixin rotated-text(
+    $num-letters: 100,
+    $angle-span: 180deg,
+    $angle-offset: 0deg,
+    $class-name: ""
+) {
+    $angle-per-char: $angle-span / $num-letters;
+
+    @for $i from 1 through $num-letters {
+        #{$class-name}#{$i} {
+            transform: rotate($angle-offset + $angle-per-char * $i);
+        }
+    }
+}

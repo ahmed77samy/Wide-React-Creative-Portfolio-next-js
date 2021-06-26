@@ -1,0 +1,14 @@
+.pagination {
+    .container {
+        display: flex;
+        column-gap: 10px;
+        justify-content: center;
+
+        button {
+            &.active,
+            &:hover {
+                background: var(--red);
+            }
+        }
+    }
+}

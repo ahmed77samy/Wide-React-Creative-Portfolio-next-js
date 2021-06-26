@@ -1,0 +1,41 @@
+.team {
+    .row {
+        row-gap: var(--px50);
+        .people {
+            .people__image {
+                ////////// people__image //////////
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    transform: scale(1, 1);
+                    max-height: 600px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    @include transition(1s var(--transition-1));
+                }
+            }
+
+            .people__title {
+                ////////// people__title //////////
+                padding: var(--px25) 0;
+                h5 {
+                    @include transition(1s var(--transition-1));
+                }
+            }
+
+            &:hover {
+                .people__image {
+                    img {
+                        transform: scale(1.2, 1.2);
+                    }
+                }
+
+                .people__title {
+                    h5 {
+                        color: var(--red);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.cilents_2 {
+    .row {
+        row-gap: var(--px50);
+        .client__cilents {
+            position: relative;
+            height: 200px;
+            background: var(--sub);
+            border: 2px solid var(--sub);
+            border-right: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .overlay {
+                ////////// overlay //////////
+                background: var(--black);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                border-right: 2px solid var(--red);
+                height: 0;
+                @include transition(0.8s var(--transition-1));
+                a {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &:hover {
+                .overlay {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.purchase {
+    background: url("../../../public/image/backgrounds/1.png") center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: var(--main--padding) 0;
+
+    .purchase__details {
+        ////////// purchase__details //////////
+        height: 100vh;
+        background: var(--sub);
+
+        @include lg {
+            margin-left: auto;
+            max-width: 50%;
+            padding-left: var(--px15);
+            padding-right: var(--px15);
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        @include xl {
+            padding-left: var(--px50);
+            padding-right: var(--px50);
+            margin-left: auto;
+            max-width: 50%;
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        .purchase__info {
+            ////////// purchase__info //////////
+            p {
+                color: var(--w-one);
+            }
+        }
+    }
+}

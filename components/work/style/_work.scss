@@ -1,0 +1,10 @@
+.work {
+    .work__list {
+        ////////// work__list //////////
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--px50);
+
+        @import "./item";
+    }
+}

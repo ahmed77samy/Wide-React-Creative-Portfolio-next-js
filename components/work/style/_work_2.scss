@@ -1,0 +1,18 @@
+.work_2 {
+    .work_list {
+        ////////// work__list //////////
+        row-gap: var(--px50);
+        .item__parent {
+            @include lg {
+                padding: 50px;
+                &:nth-child(odd) {
+                    background: var(--sub);
+                }
+            }
+            @include xl {
+                padding: 80px 80px;
+            }
+            @import "./item_2";
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.blog_2 {
+    .row {
+        row-gap: var(--px50);
+        @import "./item_2";
+    }
+}

@@ -1,0 +1,15 @@
+.portfolio {
+    .portfolio__nav {
+        ////////// portfolio__nav //////////
+        margin-bottom: var(--px50);
+        @import "/components/nav/style/nav";
+    }
+    .portfolio__list {
+        ////////// portfolio__list //////////
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--px50);
+
+        @import "/components/work/style/item";
+    }
+}
